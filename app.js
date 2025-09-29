@@ -812,4 +812,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         app.showNotification('Welcome to EduTech Nabha! 🚀', 'success');
     }, 1500);
+    const dateDiv = document.getElementById('live-date');
+if (dateDiv) {
+  const today = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  dateDiv.innerText = "Today: " + today.toLocaleDateString('en-US', options);
+}
+
 });
